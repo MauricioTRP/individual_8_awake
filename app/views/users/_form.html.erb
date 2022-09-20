@@ -1,0 +1,20 @@
+<%= form_with model: @user do |form| %>
+  <div>
+    <%= form.label :name, "Nombre" %><br>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :description, "Descripción Breve" %><br>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :email, "Correo" %><br>
+    <%= form.text_area :email %>
+  </div>
+
+  <div>
+    <%= form.submit "Crear usuario", class: "btn btn-secondary fw-bold border-white bg-white" %>
+  </div>
+<% end %>

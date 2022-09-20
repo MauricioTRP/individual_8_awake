@@ -1,4 +1,4 @@
-class Industry < ApplicationRecord
+class User < ApplicationRecord
   # == Attributes =================================================================================
 
   # == Constants ==================================================================================
@@ -11,13 +11,13 @@ class Industry < ApplicationRecord
 
   # == Relationships ==============================================================================
 
-  has_many :jobs
-
+  has_and_belongs_to_many :hobbies, join_table: 'hobbies_users'
+  has_and_belongs_to_many :jobs, join_table: 'jobs_users'
+  has_and_belongs_to_many :degrees, join_table: 'degrees_users'
+  
   # == Scopes =====================================================================================
 
   # == Validations ================================================================================
-
-  validates :industry, uniqueness: true
 
   # == Raise errors  ==============================================================================
 

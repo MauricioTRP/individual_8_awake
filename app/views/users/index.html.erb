@@ -1,0 +1,12 @@
+<h1>Usuarios</h1>
+
+<%= @users.each do |user| %>
+<div class="feature col p-2">
+  <div class="feature-icon bg-primary bg-gradient w-auto">
+    <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
+  </div>
+  <h2><%= user.name %></h2>
+  <p><%= user.description %></p>
+  <%= link_to "Más información", user, class: "btn btn-primary" %>
+</div>
+<% end %>
