@@ -4,7 +4,7 @@
           <div class="frontside">
               <div class="card">
                   <div class="card-body text-center">
-                      <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image"></p>
+                      <p><%= image_tag "https://images.pexels.com/photos/10474224/pexels-photo-10474224.jpeg?cs=srgb&dl=pexels-rodnae-productions-10474224.jpg&fm=jpg", class: "img-fluid" %></p>
                       <h4 class="card-title"> <%= user.name %></h4>
                       <p class="card-text"><%= user.description %></p>
                       <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
@@ -38,6 +38,7 @@
                               </a>
                           </li>
                       </ul>
+                      <%= link_to "Ver más", user, class: "btn btn-secondary bg-white" %>
                   </div>
               </div>
           </div>

@@ -1,5 +1,7 @@
 <h1>Usuarios</h1>
 
+<div class="container">
 <%= @users.each do |user| %>
   <%= render "card", user: user %>
 <% end %>
+</div>
